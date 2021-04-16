@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>4.0</Version>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
+    <IsPackable>true</IsPackable>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Authors>Sergey Pismennyi, Dmitry Fokin, Stas Skotnikov, Evgeniy Zyatyna, Antony Vorontsov, melnikovmv</Authors>
+    <Company>MONQ Digital lab</Company>
+    <Title>Monq.Core.Paging.Models</Title>
+    <PackageId>Monq.Core.Paging.Models</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>entity-framework library pagination abstract model</PackageTags>
+    <PackageProjectUrl>https://github.com/MONQDL/Monq.Core.Paging.Models</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MONQDL/Monq.Core.Paging.Models</RepositoryUrl>
+    <Description>The Entity Framework extensions for chunking resulting datasets as pages.</Description>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

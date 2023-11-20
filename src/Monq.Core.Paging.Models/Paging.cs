@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Monq.Core.Paging.Models
 {
@@ -45,5 +46,10 @@ namespace Monq.Core.Paging.Models
         /// </summary>
         [Range(-1, int.MaxValue)]
         public int PerPage { get; set; } = DEFAULT_ITEMS_PER_PAGE;
+
+        /// <summary>
+        /// Set of column sort parameters.
+        /// </summary>
+        public IEnumerable<SortColParameter>? SortCols { get; set; }   
     }
 }
